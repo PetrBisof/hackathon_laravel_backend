@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('api/theatres', 'TheatreController' );
+Route::get('api/theater/{$slug_theater}', 'TheatreController@hostivar' );
